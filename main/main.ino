@@ -17,7 +17,6 @@ enum MorseSignal {
 
 
 void setup() {
-    // Serial.begin(115200);
     pinMode(BROADCAST_PIN, OUTPUT);
     pinMode(ERROR_PIN, OUTPUT);
     pinMode(BUZZER_PIN, OUTPUT);
@@ -260,13 +259,16 @@ void broadcastLetter(MorseSignal* translatedLetter, size_t letterLength) {
 
 void broadcastString(String stringToBroadcast, size_t stringLength){
     MorseSignal* translatedLetter = malloc(4 * sizeof(MorseSignal));
-    int* translatedLetterLength;
+    int* translatedLetterLength = malloc(sizeof(int));
 
     for (int i = 0; i < stringLength; i++){
         translateLetter(stringToBroadcast[i], translatedLetter, translatedLetterLength);
         broadcastLetter(translatedLetter, *translatedLetterLength);
         delay(DELAY_BETWEEN_LETTERS_BROADCAST);
     }
+
+    free(translatedLetter);
+    free(translatedLetterLength);
 }
 
 void broadcastError(){
