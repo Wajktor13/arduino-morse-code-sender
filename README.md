@@ -2,9 +2,9 @@
 
 Simple code that turns Arduino into morse code transmitter. Both sound and light broadcasts are supported.
 
-The project was used in an outdoor game for scouts during summer camp, and this was the main purpose of its existence
+The project was used in an outdoor game for scouts during summer camp, and this was the main purpose of its existence.
 
-https://github.com/Wajktor13/arduino-morse-code-sender/assets/76243064/5d82552f-48a4-4fc1-8343-fd31e4c0a328
+https://github.com/Wajktor13/arduino-morse-code-sender/assets/76243064/c157ce30-a7b7-498f-94a5-6ee2261a1b95
 
 ## Technologies used
 ![C++](https://img.shields.io/static/v1?style=for-the-badge&message=C%2B%2B&color=00599C&logo=C%2B%2B&logoColor=FFFFFF&label=)
