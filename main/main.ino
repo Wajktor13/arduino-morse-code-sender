@@ -258,8 +258,8 @@ void broadcastLetter(MorseSignal* translatedLetter, size_t letterLength) {
 }
 
 void broadcastString(String stringToBroadcast, size_t stringLength){
-    MorseSignal* translatedLetter = malloc(4 * sizeof(MorseSignal));
-    int* translatedLetterLength = malloc(sizeof(int));
+    MorseSignal* translatedLetter = (MorseSignal*) malloc(4 * sizeof(MorseSignal));
+    int* translatedLetterLength = (int*) malloc(sizeof(int));
 
     for (int i = 0; i < stringLength; i++){
         translateLetter(stringToBroadcast[i], translatedLetter, translatedLetterLength);
